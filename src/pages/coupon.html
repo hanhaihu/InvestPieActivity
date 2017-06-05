@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>活动页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/commons/entry.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body style="background-color:black">
+    <div class="coupon">
+        <div class="content">
+            <input type="text" id="phone" placeholder="请输入您的手机号码">
+            <div class="immeGet">立即领取</div>
+        </div>
+    </div>
+    <div class="shadeSelf" style="display: none;">
+        <div class="cancel"></div>
+    </div>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/layer_mobile/layer.js"></script>
+    <script>
+    $(".immeGet").click(function(event) {
+
+        $(".shadeSelf").css("display", "block");
+
+        layer.open({
+            type: 1,
+            shade: false,
+            content: " <div class=\"form\">" +
+                "<div class=\"content\">" +
+                "<div class=\"flag\"></div>" +
+                "<p>注册并领取加息券</p>" +
+                "<p>已向您的手机<span>15866668888</span>发送 验证码</p>" +
+                "<div class=\"passContainer\">" +
+                "<input type=\"text\" id=\"password\" placeholder=\"设置账户密码\">" +
+                "</div>" +
+                "<div class=\"authCodeContainer\">" +
+                "<input type=\"text\" id=\"authCode\" placeholder=\"短信验证码\">" +
+                "<span class=\"remainTime\">46秒后重试</span>" +
+                "</div>" +
+                "<div class=\"submit\">提交</div>" +
+                "<div class=\"agreement\">" +
+                "<span class=\"checkbox\"></span><span>同意</span><span>注册协议</span>" +
+                "<div class=\"clear\"></div>" +
+                "</div>" +
+                "</div>" +
+                "</div>",
+            style: 'border-radius:10px',
+            success: function(elem) {
+
+                $(".checkbox").click(function(event) {
+                    $(this).toggleClass('checked');
+                });
+
+                $(".cancel").click(function(event) {
+                    layer.close($(elem).attr("index"));
+                    $(".shadeSelf").css("display", "none");
+                });
+
+                $(".layui-m-layermain").css("top", "30px");
+
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

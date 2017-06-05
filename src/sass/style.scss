@@ -1,0 +1,550 @@
+@import "./commons/variables";
+
+/*活动页样式*/
+
+.activity {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/activity.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    .content {
+        width: measure(576px);
+        position: relative;
+        margin: 0 auto;
+        top: measure(540px);
+        p {
+            font-family: PingFangSC-Medium, sans-serif;
+            font-size: measure(25.36px);
+            color: #f7f7f7;
+            text-align: center;
+            margin-bottom: measure(20px);
+        }
+        .explain {
+            background-image: url("../images/explain.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: 100% 100%;
+            width: 100%;
+            height: measure(156px);
+            div {
+                span {
+                    display: inline-block;
+                }
+            }
+            div:nth-of-type(1) {
+                span:nth-of-type(1) {
+                    margin-left: measure(16px);
+                }
+                span:nth-of-type(2) {
+                    margin-left: measure(37px);
+                }
+                span:nth-of-type(1),
+                span:nth-of-type(2) {
+                    font-family: FZLTHJW;
+                    font-size: measure(32px);
+                    color: #fe9901;
+                }
+            }
+            div:nth-of-type(2) {
+                span:nth-of-type(1) {
+                    margin-left: measure(60px);
+                }
+                span:nth-of-type(2) {
+                    margin-left: measure(120px);
+                }
+                span:nth-of-type(1),
+                span:nth-of-type(2) {
+                    font-family: FZLTHJW;
+                    font-size: measure(33.07px);
+                    color: #621014;
+                }
+            }
+            padding-top: measure(30px);
+            margin-bottom: measure(40px);
+        }
+        .buyButton {
+            background-image: url("../images/button.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: 100% 100%;
+            width: measure(370px);
+            height: measure(95px);
+            margin: 0 auto;
+            font-family: FZLTHJW;
+            font-size: measure(32.61px);
+            color: #010101;
+            text-align: center;
+            line-height: measure(95px);
+        }
+        .appMoney {
+            text-align: center;
+            #num {
+                width: measure(276px);
+                height: measure(84px);
+                border-radius: measure(15px);
+                display: inline-block;
+                font-family: FZLTHJW;
+                font-size: measure(36.38px);
+                color: #a3a09e;
+                padding-left: measure(28px);
+                margin-left: measure(20px);
+                margin-right: measure(20px);
+            }
+            margin-bottom: measure(18px);
+        }
+        .rule {
+            text-align: center;
+            margin-bottom: measure(25px);
+            .point {
+                display: inline-block;
+                width: measure(28px);
+                height: measure(28px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .ruleButton {
+                background-image: url("../images/rule.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                background-size: 100% 100%;
+                width: measure(123px);
+                height: measure(44px);
+                font-family: FZLTHJW;
+                font-size: measure(21.84px);
+                color: #675206;
+                text-align: center;
+                line-height: measure(40px);
+                display: inline-block;
+                margin-left: measure(55px);
+            }
+        }
+    }
+}
+
+
+/*活动页规则弹层*/
+
+.toaster {
+    width: measure(613px);
+    height: measure(740px);
+    background-image: url("../images/ruleContainer.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    padding-top: measure(10px);
+    p {
+        font-family: FZLTHJW;
+        font-size: measure(42.19px);
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    ul {
+        width: measure(510px);
+        margin: measure(60px) auto 0;
+        li {
+            font-family: "Microsoft YaHei";
+            font-size: measure(20px);
+            color: #492409;
+            text-transform: uppercase;
+            margin-bottom: measure(25px);
+        }
+    }
+    .close {
+        background-image: url("../images/button.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        width: measure(370px);
+        height: measure(95px);
+        margin: 0 auto;
+        font-family: FZLTHJW;
+        font-size: measure(32.61px);
+        color: #010101;
+        text-align: center;
+        line-height: measure(95px);
+    }
+}
+
+
+/*拆红包页样式*/
+
+.bonus {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bonusBg.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    position: relative;
+    .compony {
+        position: absolute;
+        top: measure(110px);
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        p {
+            color: #f9e3a7;
+        }
+        p:nth-of-type(1) {
+            font-family: FZLTCHK;
+            font-size: measure(63.7px);
+        }
+        p:nth-of-type(2) {
+            font-family: FZLTXIHJW;
+            font-size: measure(25.98px);
+        }
+        p:nth-of-type(3) {
+            font-family: FZLTCHK;
+            font-size: measure(16.57px);
+        }
+    }
+    .friend {
+        position: absolute;
+        top: measure(360px);
+        text-align: center;
+        width: 100%;
+        .friendImage {
+            text-align: center;
+            width: measure(136px);
+            height: measure(135px);
+            margin: 0 auto measure(30px);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            font-family: FZLTXIHJW;
+            font-size: measure(36.8px);
+            color: #fff;
+        }
+    }
+    .open {
+        position: absolute;
+        top: measure(720px);
+        text-align: center;
+        width: 100%;
+        .openImage {
+            width: measure(208px);
+            height: measure(206px);
+            margin: 0 auto measure(25px);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            font-family: FZLTXIHJW;
+            font-size: measure(27.58px);
+            color: #d5b270;
+        }
+    }
+}
+
+
+/*抽奖券页样式*/
+
+.coupon {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/couponBg.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    position: relative;
+    .content {
+        position: absolute;
+        top: measure(850px);
+        text-align: center;
+        width: 100%;
+        #phone {
+            display: inline-block;
+            width: measure(568px);
+            height: measure(78px);
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            background-color: #fffff9;
+            font-family: PingFang;
+            font-size: measure(30px);
+            color: #e5e4e4;
+            margin-bottom: measure(20px);
+            padding-left: measure(15px);
+        }
+        .immeGet {
+            background-image: url("../images/longButton.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: 100% 100%;
+            width: measure(547px);
+            height: measure(110px);
+            margin: 0 auto;
+            font-family: FZLTHJW;
+            font-size: measure(33.64px);
+            color: #642d1e;
+            text-align: center;
+            line-height: measure(125px);
+        }
+    }
+}
+
+.form {
+    width: measure(574px);
+    height: measure(740px);
+    background-color: white;
+    border-radius: measure(10px);
+    .content {
+        width: measure(480px);
+        height: measure(597px);
+        margin: 0 auto 0;
+        .flag {
+            background-image: url("../images/flag.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: 100% 100%;
+            width: measure(392px);
+            height: measure(80px);
+            margin: 0 auto;
+        }
+        p:nth-of-type(1) {
+            font-family: FZLTCHK;
+            font-size: measure(48.39px);
+            color: #ff4744;
+            font-weight: bold;
+            text-align: center;
+        }
+        p:nth-of-type(2) {
+            font-family: "Microsoft YaHei";
+            font-size: measure(31.22px);
+            color: #999;
+            text-align: center;
+            margin-bottom: measure(30px);
+            span {
+                color: #ff4744;
+            }
+        }
+        input {
+            display: inline-block;
+            height: measure(82px);
+            font-family: "Microsoft YaHei";
+            font-size: measure(30.56px);
+            color: #999999;
+            padding-left: measure(20px);
+            border: measure(1px) solid #e5e5e5;
+        }
+        .passContainer {
+            margin-bottom: measure(40px);
+            input:nth-of-type(1) {
+                width: 100%;
+            }
+        }
+        .authCodeContainer {
+            margin-bottom: measure(40px);
+            input:nth-of-type(1) {
+                width: measure(300px);
+            }
+            line-height: measure(82px);
+        }
+        .remainTime {
+            display: inline-block;
+            font-family: "Microsoft YaHei";
+            font-size: measure(28.4px);
+            color: #999;
+            margin-left: measure(15px);
+        }
+        .submit {
+            height: measure(92px);
+            -webkit-border-radius: measure(4px);
+            -moz-border-radius: measure(4px);
+            border-radius: measure(4px);
+            background-color: #ff4744;
+            font-family: "Microsoft YaHei";
+            font-size: measure(44.71px);
+            color: #ffffff;
+            font-weight: blod;
+            line-height: measure(92px);
+            text-align: center;
+            margin-bottom: measure(45px);
+        }
+        .agreement {
+            text-align: center;
+            font-family: "Microsoft YaHei";
+            font-size: measure(30px);
+            line-height: measure(34px);
+            width: measure(242px);
+            margin: 0 auto;
+            input {
+                display: inline-block;
+                background-color: #4e99fe;
+            }
+            .checkbox {
+                display: inline-block;
+                width: measure(32px);
+                height: measure(34px);
+                border-radius: measure(4px);
+                background-image: url("../images/unchecked.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                background-size: 100% 100%;
+                margin-right: measure(10px);
+                float: left;
+            }
+            .checked {
+                background-image: url("../images/checked.png");
+            }
+            span:nth-of-type(2) {
+                color: #858585;
+                margin-top: measure(-8px);
+                float: left;
+                margin-right: measure(3px);
+            }
+            span:nth-of-type(3) {
+                color: #ff4744;
+                float: right;
+                margin-top: measure(-8px);
+                cursor: pointer;
+            }
+            .clear {
+                clear: both;
+            }
+        }
+    }
+}
+
+.shadeSelf {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/shade.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    text-align: center;
+    z-index: 100000;
+    .cancel {
+        position: absolute;
+        top: measure(1060px);
+        left: 46%;
+        width: measure(62px);
+        height: measure(62px);
+        background-image: url("../images/close.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+    }
+}
+
+
+/*规则页样式*/
+
+.rules {
+    background-image: url("../images/inviteBg.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    width: 100%;
+    height: measure(1600px);
+    padding-top: measure(1326px);
+    .content {
+        text-align: center;
+        width: measure(642px);
+        margin: 0 auto;
+        p {
+            font-family: FZY3JW;
+            font-size: measure(36px);
+            color: #642d1e;
+            span {
+                a {
+                    color: white;
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+            }
+            span:nth-of-type(1) {
+                margin-right: measure(90px);
+                margin-left: measure(20px);
+            }
+            margin-bottom: measure(30px);
+        }
+        .action {
+            div {
+                background-image: url("../images/buttonForRules.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                background-size: 100% 100%;
+                display: inline-block;
+                width: measure(314px);
+                height: measure(90px);
+                font-family: FZY3JW;
+                font-size: measure(36px);
+                color: #642d1e;
+                line-height: measure(90px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .acRule {
+            font-family: FZY3JW;
+            font-size: measure(36px);
+            text-decoration: underline;
+            color: #642d1e;
+            margin-top: measure(30px);
+        }
+    }
+}
+
+.ruleContainer {
+    width: measure(656px);
+    height: measure(1050px);
+    background-image: url("../images/ruleExplain.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    padding-top: measure(40px);
+    .cancel {
+        width: measure(43px);
+        height: measure(43px);
+        position: fixed;
+        top: measure(40px);
+        right: measure(56px);
+        z-index: 1000000;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .con {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        p {
+            margin: 0 auto;
+            width: measure(159px);
+            height: measure(37px);
+            background-image: url("../images/title.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: 100% 100%;
+        }
+        ul {
+            width: measure(602px);
+            margin: measure(20px) auto 0;
+            li {
+                font-family: FZY3JW;
+                font-size: measure(25px);
+                color: #642d1e;
+                text-transform: uppercase;
+                margin-bottom: measure(25px);
+            }
+        }
+    }
+}

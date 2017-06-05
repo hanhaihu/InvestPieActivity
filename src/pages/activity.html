@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>活动页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/commons/entry.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="activity">
+        <div class="content">
+            <p>活动时间：2017年6月1日~2017年7月1日</p>
+            <div class="explain">
+                <div><span>新手专享标的规模</span> <span>新用户投资限额</span></div>
+                <div><span>300000.00</span> <span>10000.00</span></div>
+            </div>
+            <div class="appMoney">
+                <span>申购金额</span>
+                <input type="text" id="num" / placeholder="10000">
+                <span>元</span>
+            </div>
+            <div class="rule">
+                <div class="point"><img src="../images/point.png" alt=""></div>
+                <span>新手专享&nbsp&nbsp限购一次</span>
+                <div class="ruleButton">活动规则</div>
+            </div>
+            <div class="buyButton">立即申购</div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/layer_mobile/layer.js"></script>
+    <script>
+    $(".ruleButton").click(function(event) {
+        layer.open({
+            type: 1,
+            content: "  <div class=\"toaster\">" +
+                "<p>活动规则</p>" +
+                "<ul>" +
+                "<li>1、活动时间：2017年6月1日～2017年7月1日（待定），活动限于活动期间投资派平台新注册用户；</li>" +
+                "<li>2、新用户完成注册即获“4%加息新手专享礼”，使用规则：自注册领取7日内有效；有效期内首次购买“7天新手标”立享4%加息，新手标利率6%+加息利率4%=最终利率10%；</li>" +
+                "<li>3、4%加息利率与购买产品利率一同起息（T+1自然日起息）；4%加息收益与购买产品本息回款一同发放；</li>" +
+                "<li>4、相同手机号、身份证号、设备均视为同一用户，若有疑问可咨询微信在线客服或拨打客服电话：400-888-7772（工作日9:00-18:00）；</li>" +
+                "<li>5、本活动最终解释权归投资派平台所有。</li>" +
+                "</ul>" +
+                "<div class=\"close\">关闭</div>" +
+                "</div>",
+            style: 'border-radius:20px',
+            success: function(elem) {
+                $(".close").click(function(event) {
+                    layer.close($(elem).attr("index"));
+                });
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

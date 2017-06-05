@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>活动页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/commons/entry.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="rules">
+        <div class="content">
+            <p>我的邀请码:<span><a href="#">888888</a></span><span><a href="#">我的邀请记录></a></span></p>
+            <div class="action">
+                <div>面对面邀请好友</div>
+                <div>分享链接邀请好友</div>
+            </div>
+            <div class="acRule">活动规则</div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/layer_mobile/layer.js"></script>
+    <script>
+    $(".acRule").click(function(event) {
+
+        var str = getRadius();
+
+        layer.open({
+            type: 1,
+            content: "<div class=\"ruleContainer\">" +
+                "<div class=\"cancel\">" +
+                "<img src=\"../images/cancel.png\" alt=\"\">" +
+                "</div>" +
+                "<div class=\"con\">" +
+                " <p></p>" +
+                "<ul>" +
+                "<li>1. 活动时间：2017年6月1日～2017年7月1日；</li>" +
+                "<li>2. 活动对象：个人用户完成注册均可参与邀请好友活动；</li>" +
+                "<li>邀请人可通过邀请码、邀请链接或二维码邀 请好友，好友在邀请后成功注册投资，邀请 人即可获得相应活动奖励；" +
+                "</li>" +
+                "<li>" +
+                "4. 活动实行一级推荐制，如A邀请B成功投资， 邀请人A可获得好友B每日待收本金年化0.3% 的现金奖励；" +
+                "</li>" +
+                "<li>" +
+                "5. 邀请人奖励=被邀请人每日待收本金×0.3% ÷365，待收本金判定时间为每日23:59:59；" +
+                "</li>" +
+                "<li>" +
+                "6. 邀请人奖励发放方式：系统每日计提奖励金 额，并于次日自动发放至邀请人账户，用户 可通过奖励记录或交易明细查看详情；" +
+                "</li>" +
+                "<li>" +
+                "7. 好友奖励关系有效期1年，例如：2017-06-01 12:00:00建立邀请奖励关系，到期日为 2018-06-01 12:00:00；</li>" +
+                "<li>" +
+                "8. 相同手机号、身份证号、设备均视为同一用 户，若有疑问可咨询微信在线客服或拨打客 服电话：400-888-7772（工作日9:00-18:00 ）；" +
+                "</li>" +
+                "<li>9. 活动中如有任何不正当邀请手段或违反规则 行为，一经查实取消活动资格和奖励，投资 派平台保留奖励发放的权利，并视情况追究 法律责任；" +
+                "</li>" +
+                "<li>" +
+                "10. 本活动最终解释权归投资派平台所有。" +
+                "</li>" +
+                "</ul>" +
+                "</div>" +
+                "</div>",
+            style: str,
+            success: function(elem) {
+                $(".cancel").click(function(event) {
+                    layer.close($(elem).attr("index"));
+                });
+            }
+        });
+    });
+
+
+    function getRadius() {
+
+        if (window.screen.width <= 320) {
+            str = "border-radius:25px;"
+        } else if (320 < window.screen.width <= 375) {
+            str = 'border-radius:28px;'
+
+        } else if (375 < window.screen.width) {
+            str = 'border-radius:32px;'
+        }
+
+        return str;
+    }
+    </script>
+</body>
+
+</html>
