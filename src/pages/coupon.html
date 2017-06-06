@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body style="background-color:black">
+<body>
     <div class="coupon">
         <div class="content">
             <input type="text" id="phone" placeholder="请输入您的手机号码">
@@ -22,6 +22,7 @@
     </div>
     <div class="shadeSelf" style="display: none;">
         <div class="cancel"></div>
+    </div>
     </div>
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/layer_mobile/layer.js"></script>
@@ -43,7 +44,7 @@
                 "</div>" +
                 "<div class=\"authCodeContainer\">" +
                 "<input type=\"text\" id=\"authCode\" placeholder=\"短信验证码\">" +
-                "<span class=\"remainTime\">46秒后重试</span>" +
+                "<span class=\"qrCode\">获取验证码</span>" +
                 "</div>" +
                 "<div class=\"submit\">提交</div>" +
                 "<div class=\"agreement\">" +
@@ -66,9 +67,34 @@
 
                 $(".layui-m-layermain").css("top", "30px");
 
+                $(".qrCode").click(function(event) {
+                    time($(this));
+                });
+
             }
         });
     });
+
+
+    var wait = 60;
+
+    function time(o) {
+        if (wait == 0) {
+            o.attr("disabled", true);
+            o.removeClass('disabled');
+            o.html("重新获取");
+            wait = 60;
+        } else {
+            o.attr("disabled", false);
+            o.addClass('disabled');
+            o.html(wait + "秒后重试");
+            wait--;
+            setTimeout(function() {
+                    time(o)
+                },
+                1000);
+        }
+    }
     </script>
 </body>
 

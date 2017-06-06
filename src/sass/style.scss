@@ -346,16 +346,25 @@
         .authCodeContainer {
             margin-bottom: measure(40px);
             input:nth-of-type(1) {
-                width: measure(300px);
+                width: measure(290px);
             }
             line-height: measure(82px);
         }
-        .remainTime {
+      
+        .qrCode {
             display: inline-block;
             font-family: "Microsoft YaHei";
             font-size: measure(28.4px);
-            color: #999;
+            color: white;
             margin-left: measure(15px);
+            background: #ff7610;
+            height: measure(82px);
+            line-height: measure(82px);
+            border-radius: measure(5px);
+            text-align: center;
+        }
+        .disabled {
+            background: #dcdcdc;
         }
         .submit {
             height: measure(92px);
